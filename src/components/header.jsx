@@ -14,11 +14,12 @@ function Header() {
   return (
     <header className="lg:text-3xl xl:text-xl flex justify-between px-5 bg-[black] mt-0 text-slate-200 h-20 dark:bg-[#395B64]">
       <Link href="/" className="flex items-center self-center dark:text-black">
-        <Image src="/logo.svg" width={60} height={20} />
-       <h1 className="pl-2 text-[30px] lg:text-3xl xl:text-3xl"> Baay<span className="text-red-400">Meissa</span></h1>
+        <Image className="sm:ml-10" src="/logo.svg" width={60} height={20} />
+       <h1 className="sm:pl-4 pl-2 text-[30px] lg:text-3xl xl:text-3xl"> Baay<span className="text-red-400">Meissa</span></h1>
       </Link>
-      <div className="flex items-center">
+      <div className="flex items-center ">
         <nav className="dark:text-black xl:text-xl text-sm sm:flex gap-4 px-5 hidden">
+          
           <Link
             href="#about"
             className="transition ease-in-out delay-30 hover:-translate-y-1 hover:scale-100"
@@ -37,9 +38,14 @@ function Header() {
           >
             Contact
           </Link>
+          
+         
         </nav>
+       
         <ThemeToggle className="hidden" />
         <Menu onClick={()=>setVisible(true)} className='text-white sm:hidden' />
+
+          
       </div>
 
       
