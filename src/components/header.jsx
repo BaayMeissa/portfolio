@@ -4,7 +4,7 @@ import Image from "next/image";
 import About from "./About";
 import {CgProfile, CgMenuGridR} from 'react-icons/cg'
 import { Menu } from "lucide-react";
-import { IoArrowBackCircleOutline } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
 
 import { useState } from "react";
 
@@ -45,8 +45,8 @@ function Header() {
       
 
       <div
-        className={`absolute  top-0 right-0 left-[50%] bottom-0 overflow-hidden bg-white transition-all ${
-          visible ? "w-[50%]" : "w-0"
+        className={`absolute  top-0 right-0 left-0 overflow-hidden bg-white transition-all ${
+          visible ? "w-[100%]" : "w-0"
         }`}
       >
         
@@ -56,28 +56,30 @@ function Header() {
             className="flex items-center justify-between gap-4 p-3"
           >
             <div onClick={() => setVisible(false)} className="flex items-center gap-3">
-            <IoArrowBackCircleOutline onClick={() => setVisible(false)}/>
-            <p>Back</p>
+            <IoClose className="w-28" onClick={() => setVisible(false)}/>
             </div>
             <div className='flex flex-col gap-4'>
   <ThemeToggle sidebar={true} />
 </div>    
           </div>
           <Link
-            href="/about"
+          onClick={() => setVisible(false)}
+            href="#about"
             className="transition ease-in-out delay-30 hover:-translate-y-1 hover:scale-100"
           >
             About
           </Link>
           <Link
-            href="/projects"
+            href="#projects"
             className="transition ease-in-out delay-30 hover:-translate-y-1 hover:scale-100"
+            onClick={() => setVisible(false)}
           >
             Projects
           </Link>
           <Link
-            href="/contact"
+            href="#contact"
             className="transition ease-in-out delay-30 hover:-translate-y-1 hover:scale-100"
+            onClick={() => setVisible(false)}
           >
             Contact
           </Link>
