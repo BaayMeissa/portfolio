@@ -2,9 +2,9 @@ import React from 'react'
 
 const Skill = ({skill}) => {
   return (
-    <div className=''>
-<div className='flex flex-wrap justify-center gap-2 text-center'>
-     <h1 className='inline p-2 rounded-sm text-slate-50 dark:bg-[#395B64] bg-[#181717]'>HTML</h1>
+    <div>
+    <div className='flex flex-wrap justify-center gap-2 text-center'>
+     <h1 className='inline p-2 rounded-sm text-slate-50 dark:bg-[#395B64] bg-[#181717]'>HTML</h1> 
      <h1 className='inline p-2 rounded-sm text-slate-50 dark:bg-[#395B64] bg-[#181717]'>CSS</h1>
      <h1 className='inline p-2 rounded-sm text-slate-50 dark:bg-[#395B64] bg-[#181717]'>JAVASCRIPT</h1>
      <h1 className='inline p-2 rounded-sm text-slate-50 dark:bg-[#395B64] bg-[#181717]'>TYPESCRIPT</h1>
